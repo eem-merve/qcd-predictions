@@ -10,7 +10,7 @@ REQUIRED_FEATURES = ["energy","integral_error","Central_Value","Absolute_PDF_Unc
 ALL_PROCESSES     = ["LO","NLO","NNLO"]
 
 st.set_page_config(page_title="Cross-Section Tahmin (Süreç Bazlı Giriş)", layout="centered")
-st.title("🔬 Cross-Section Prediction")
+st.title("Cross-Section Prediction")
 st.markdown("<small>Created by **Merve Tas**</small>", unsafe_allow_html=True)
 
 # ================== MODELLER ==================
@@ -95,7 +95,7 @@ if not models_map:
 profiles = load_feature_profiles()  # olmayabilir (None)
 
 # ================== ARAYÜZ ==================
-st.subheader("⚙️ INPUT")
+st.subheader("INPUT")
 channel = st.selectbox("Kanal", options=available_channels, index=0)
 energy  = st.number_input("Energy (tüm süreçler için ortak)", min_value=0.0, value=100.0, step=1.0)
 
@@ -116,7 +116,7 @@ for proc in selected_processes:
             per_proc_cfg[proc] = {"mode":"auto"}  # profil/enterpolasyon (varsa); yoksa fallback
 
 st.markdown("---")
-if st.button("🔮 Tahmin Et"):
+if st.button("Tahmin Et"):
     if not selected_processes:
         st.warning("En az bir süreç seçmelisin.")
         st.stop()
