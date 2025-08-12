@@ -11,7 +11,7 @@ ALL_PROCESSES     = ["LO","NLO","NNLO"]
 
 st.set_page_config(page_title="Cross-Section Tahmin (Süreç Bazlı Giriş)", layout="centered")
 st.title("🔬 Cross-Section Prediction")
-st.markdown("<small>Created by **Merve Balki**</small>", unsafe_allow_html=True)
+st.markdown("<small>Created by **Merve Tas**</small>", unsafe_allow_html=True)
 
 # ================== MODELLER ==================
 @st.cache_resource(show_spinner=False)
